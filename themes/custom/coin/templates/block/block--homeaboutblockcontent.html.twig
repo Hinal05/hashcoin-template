@@ -1,0 +1,24 @@
+<section class="about-wrapper" style="background-image: url('{{ file_url(content.field_bg_image.0['#item'].entity.uri.value) }}');background-size:cover;background-position:center;">
+  <div class="container">
+    <div class="row justify-content-end">
+      <div class="col-sm-8 col-md-6 col-lg-5 col-sm-offset-4 col-md-offset-6 col-lg-offset-7">
+        <div class="about-right-content">
+          <small>{{ content.field_title_type }}</small>
+          <h2>{{ content.field_title }}</h2>
+          <p>{{ content.body }}</p>
+          <div class="theme-button">{{ content.field_join_button }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{#<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ title_suffix }}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+</div>#}

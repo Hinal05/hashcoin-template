@@ -1,0 +1,6 @@
+.inner-title-wrapper{
+    background: linear-gradient(-90deg, #fab915, #bf3654);
+    padding:70px 0;position: relative;
+    &::before{content: '';display: block;position: absolute;top: 0;left: 0;right: 0;bottom: 0;z-index: 1;opacity: 0.3;background-image: url('../../assets/images/title-bg.jpg');background-size: cover;}
+    h1{color: $white;font-size: 48px;font-weight: 600;line-height: 30px;text-align: center;z-index: 1;position: relative;}
+}

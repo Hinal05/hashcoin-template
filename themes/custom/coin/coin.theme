@@ -1,0 +1,83 @@
+<?php
+
+    function coin_preprocess(&$variables, $hook) {
+        /* Add class for service item */
+        if ($hook == 'views_view_unformatted__services') {
+            $variables['attribute_row'] = 'row justify-content-center';
+            $variables['attribute_col'] = 'col-sm-6';
+        }
+    }
+    
+    /* Add class in navigation */
+    function coin_preprocess_menu__main(&$variables) {
+        $variables['attributes']['class'][] = 'menu';
+    }
+    /* Add class in service wrapper */
+    function coin_preprocess_views_view__services(&$vars) {
+        $vars['attributes']['class'][] = 'service-wrapper';
+    }
+    /* Add class for blog views */
+    function coin_preprocess_views_view__our_blog(&$vars) {
+        $vars['attributes']['class'][] = 'blog-block';
+    }
+    /* Add class in footer region */
+    function coin_preprocess_region(&$vars) {
+        if ($vars['region'] == 'footer') {
+            $vars['attributes']['class'][] = 'footer-row';
+        }
+    }
+
+    function coin_preprocess_imagefield_slideshow(&$vars) {
+        
+    }
+
+    /**
+    * Implements hook_form_alter() for search form. (Update seach field text to icon)
+    */
+    function simplenews_form_alter(&$form, &$form_state, $form_id) {
+        /* Header Search add button icon*/
+        if ($form_id == 'search_block_form') {
+            $form['search_block_form']['#attributes']['placeholder'] = t('Search');
+
+            $form['button'] = array(
+            '#type' => 'item',
+            '#markup' => '<button type="submit" id="edit-submit-btn" name="op" class="form-submit"><i class="fa fa-search"></i></button>',
+            '#weight' => 1000,
+            );
+        }
+    }
+    
+    /* Form button text changes */
+    function coin_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+        if (in_array($form_id, ['contact_message_get_a_free_quote_form', ])) {
+            $key = ($form_id == 'contact_message_get_a_free_quote_form') ? 'actions' : 'basic';
+            $form[$key]['submit']['#value'] = 'Send Now';
+            $form[$key]['preview']['#access'] = FALSE;
+        }
+        elseif (in_array($form_id, ['contact_message_calculator_form_form', ])) {
+            $key1 = ($form_id == 'contact_message_calculator_form_form') ? 'actions' : 'basic';
+            $form[$key1]['submit']['#value'] = 'BUY NOW!';
+        }
+    }
+
+    /*-------------------------------------------
+    --------------Hook preprocess----------------
+    template_preprocess(&$variables, $hook)
+    template_preprocess_HOOK(&$variables)
+    MODULE_preprocess(&$variables, $hook)
+    MODULE_preprocess_HOOK(&$variables)
+    ENGINE_engine_preprocess(&$variables, $hook)
+    ENGINE_engine_preprocess_HOOK(&$variables)
+    THEME_preprocess(&$variables, $hook)
+    THEME_preprocess_HOOK(&$variables)
+    --------------------------------------------*/
+
+    /*function coin_preprocess_node(&$variables){
+        $variables['current_user_is_owner'] = FALSE;
+        if ($variables['logged_in'] == TRUE && $variables['node']->getOwnerId() == $variables['user']->id()){
+            $variables['label']['suffix'] = '- [you are the author]';
+            $variables['current_user_is_owner'] = TRUE;
+        }
+    }*/
+    
+?>

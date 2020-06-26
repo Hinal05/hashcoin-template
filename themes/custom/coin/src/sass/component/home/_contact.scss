@@ -1,0 +1,121 @@
+.contact-wrapper {
+    background: url(../../assets/images/contact.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+
+    h2 {
+        font-size: 48px;
+        color: $gray;
+        margin-bottom: 30px;
+        font-weight: 600;
+    }
+
+    small {
+        font-size: 14px;
+        font-weight: 700;
+        color: $maroon;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        margin-bottom: 15px;
+        display: block;
+    }
+
+    .contact-message-get-a-free-quote-form {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        align-items: flex-end;
+
+        >div {
+            width: 33.33%;
+            padding: 0 15px;
+
+            .js-form-item {
+                margin-bottom: 25px;
+                position: relative;
+
+                input,
+                textarea {
+                    width: 100%;
+                    border: 0;
+                    border-radius: 25px;
+                    height: 40px;
+                    padding: 7px 10px;
+                    text-align: center;
+                    padding-left: 45px;
+                    color: $gray;
+                    font-weight: 700;
+                    font-size: 14px;
+
+                    &::placeholder {
+                        text-transform: uppercase;
+                        opacity: 0.8;
+                        letter-spacing: 0.2em;
+                    }
+                }
+
+                textarea {
+                    height: auto;
+                }
+
+                label {
+                    display: none;
+                }
+
+                &::before {
+                    position: absolute;
+                    left: 20px;
+                    top: 4px;
+                    color: $maroon;
+                }
+
+                &.form-item-field-full--0-value::before {
+                    font-family: 'FontAwesome';
+                    content: "\f2c0";
+                }
+
+                &.form-item-field-email-address-quote-0-value::before {
+                    font-family: 'FontAwesome';
+                    content: "\f003";
+                }
+
+                &.form-item-field-your-subject-quote-0-value::before {
+                    font-family: 'FontAwesome';
+                    content: "\f0c6";
+                }
+
+                &.form-item-field-your-question-quote-0-value::before {
+                    font-family: 'FontAwesome';
+                    content: "\f040";
+                }
+            }
+
+            &.field--name-field-your-question-quote {
+                width: 100%;
+            }
+
+            &.form-actions {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .form-submit {
+                background: $maroon;
+                color: $white;
+                min-width: 200px;
+                border-radius: 30px;
+                padding: 15px 40px;
+                letter-spacing: 0.2em;
+                border: 0;
+                font-weight: 700;
+                text-transform: uppercase;
+
+                &:hover {
+                    background: $yellow;
+                }
+            }
+        }
+    }
+}

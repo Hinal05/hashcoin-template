@@ -1,0 +1,146 @@
+footer {
+    background: url(../../assets/images/texture.png) $gray;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #919899;
+    padding: 65px 0;
+
+    .footer-row {
+        #block-footerlogo {
+            width: 100%;
+            text-align: center;
+        }
+
+        display: flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+
+        .simplenews-subscriptions-block-newsletter,
+        .footer-about-wrapper {
+            width: 33.33%;
+        }
+
+        #block-socialicons-2 {
+            width: 100%;
+        }
+    }
+
+    .social-block {
+        text-align: center;
+
+        >a {
+            border-color: rgba(152, 152, 152, 0.2);
+        }
+    }
+
+    .footer-about-wrapper {
+        text-align: center;
+
+        h3 {
+            font-size: 36px;
+            color: $white;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+
+        .f-add {
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: $white;
+            margin-bottom: 15px;
+        }
+
+        .f-email {
+            color: $yellow;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 15px;
+        }
+    }
+
+    .simplenews-subscriptions-block-newsletter {
+        text-align: center;
+
+        h2 {
+            font-size: 36px;
+            font-weight: 600;
+            margin-bottom: 25px;
+            color: $white;
+        }
+
+        >form {
+            position: relative;
+
+            .js-form-type-email {
+
+                label,
+                .description {
+                    display: none;
+                }
+
+                .form-email {
+                    width: 100%;
+                    border: 0;
+                    border-radius: 20px;
+                    padding: 5px 10px;
+                    font-weight: 700;
+                    height: 40px;
+                    font-size: 14px;
+                    line-height: 30px;
+                    color: #919899;
+                    letter-spacing: 1px;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .form-actions {
+                position: absolute;
+                right: 6px;
+                bottom: 6px;
+
+                &::before {
+                    content: "\f003";
+                    font-family: FontAwesome;
+                    font-size: 18px;
+                    width: 30px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .form-submit {
+                    font-size: 0;
+                    position: absolute;
+                    bottom: 0;
+                    width: 30px;
+                    height: 30px;
+                    top: 0;
+                    opacity: 0;
+                    right: 0;
+                }
+            }
+
+            .js-form-item {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.copyright-wrapper {
+    background: $white;
+    color: $mediumGray;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+    padding: 25px 0;
+}

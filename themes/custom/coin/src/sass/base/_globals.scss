@@ -1,0 +1,133 @@
+/* =======================================================================
+## ++ Globals
+========================================================================== */
+html {
+    font-size: 100%;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
+    transition: all 0.2s linear 0s;
+    outline: none;
+}
+
+::selection {
+    color: $white;
+    background-color: $maroon;
+}
+
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+button:hover,
+input[type="submit"]:hover,
+a:hover {
+    transition: all 0.4s linear 0s;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+/* float clearing for IE6 */
+* html .clearfix {
+    height: 1%;
+    overflow: visible;
+}
+
+/* float clearing for IE7 */
+*+html .clearfix {
+    min-height: 1%;
+}
+
+/* float clearing for everyone else */
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    font-size: 0;
+}
+
+.clr {
+    clear: both;
+}
+
+.toTop {
+    width: 60px;
+    height: 60px;
+    bottom: 60px;
+    right: 60px;
+    border-radius: 30px;
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    text-decoration: none;
+    z-index: 9999;
+    font-size: 0;
+    color: transparent;
+    color: $white;
+    background: $yellow;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+
+    >i {
+        font-size: 20px;
+    }
+}
+
+.starrating {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+
+    .starline-off,
+    .starline7-on {
+        float: none;
+        background-size: 100%;
+        width: 20px;
+        height: 20px;
+    }
+
+    .starline7-on {
+        background-position: 0 -141px;
+    }
+}
+
+.owl-carousel .owl-item img {
+    width: auto;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.feed-icon {
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}

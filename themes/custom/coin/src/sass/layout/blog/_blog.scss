@@ -1,0 +1,134 @@
+.blog-screen-item {
+    border: 1px solid #e5e5e5;
+    margin: 60px 0;
+
+    .blog-screen-thumb {
+
+        .imagefield_slideshow-wrapper {
+
+            border: 0;
+            padding: 0;
+            margin: 0;
+            display: block;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+
+        }
+
+        iframe {
+            width: 100%;
+            min-height: 350px;
+        }
+    }
+
+    .blog-screen-content {
+        padding: 55px;
+        position: relative;
+        z-index: 1;
+
+        .create-info {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: $mediumGray;
+
+            a {
+                color: inherit;
+            }
+        }
+
+        h4 a {
+            font-size: 24px;
+            color: $gray;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .entry-content {
+            p{
+                padding: 7px 0;;
+                &:nth-child(2n) {
+                    background-color: #f6f7f9;
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+
+    .cycle-pager {
+        text-align: center;
+
+        >span {
+            width: 8px;
+            height: 8px;
+            font-size: 28px;
+            margin: 0 6px;
+            color: $white;
+           
+        }
+    }
+
+    &.left-position {
+        display: flex;
+        align-items: center;
+
+        .blog-screen-thumb {
+            width: 40%;
+        }
+
+        .blog-screen-content {
+            width: 60%;
+        }
+    }
+
+    &.right-position {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+
+        .blog-screen-thumb {
+            width: 40%;
+        }
+
+        .blog-screen-content {
+            width: 60%;
+        }
+    }
+
+    &.top-position {}
+
+    &.background-position {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+
+        .blog-screen-thumb {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 0;
+        }
+
+        .blog-screen-content {
+            .create-info {
+                justify-content: center;
+                flex-direction: column;
+            }
+
+            h4 a {
+                color: $white;
+            }
+
+            p{
+                color: $white;
+            }
+        }
+    }
+
+}

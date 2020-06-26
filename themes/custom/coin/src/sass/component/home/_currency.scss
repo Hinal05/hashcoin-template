@@ -1,0 +1,108 @@
+.currency-wrapper {
+    background: url(../../assets/images/calculator.jpg) no-repeat center;
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+
+    .currency-content {
+        text-align: left;
+
+        small {
+            font-size: 14px;
+            font-weight: 700;
+            color: $maroon;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        h2 {
+            font-size: 48px;
+            color: $gray;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        p {
+            color: $white;
+        }
+
+        .currency-form {
+            margin-top: 30px;
+
+            .contact-message-calculator-form-form {
+                display: flex;
+                flex-wrap: wrap;
+
+                .form-wrapper {
+                    label {
+                        display: none;
+                    }
+
+                    input[type="text"],
+                    select {
+                        width: 100%;
+                        border: 0;
+                        border-radius: 30px;
+                        padding: 5px 15px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 14px;
+                        height: 40px;
+                        margin: 0;
+                    }
+
+                    &.field--type-list-string {
+                        width: 60%;
+                        padding-left: 10px;
+                        margin-bottom: 10px;
+
+                        .js-form-type-select {
+                            position: relative;
+
+                            &::before {
+                                content: "\f107";
+                                font-family: 'FontAwesome';
+                                position: absolute;
+                                right: 0;
+                                top: 0px;
+                                background: $white;
+                                padding: 5px 15px;
+                                border-top-right-radius: 30px;
+                                border-bottom-right-radius: 30px;
+                                color: $maroon;
+                            }
+                        }
+                    }
+
+                    &.field--type-string {
+                        width: 40%;
+                        margin-bottom: 10px;
+                    }
+
+                    &.form-actions {
+                        width: 100%;
+                        margin-top: 30px;
+                    }
+
+                    .form-submit {
+                        background: $maroon;
+                        color: $white;
+                        min-width: 185px;
+                        border-radius: 30px;
+                        padding: 10px 26px;
+                        letter-spacing: 0.2em;
+                        border: 0;
+                        font-weight: 700;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            background: $yellow;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

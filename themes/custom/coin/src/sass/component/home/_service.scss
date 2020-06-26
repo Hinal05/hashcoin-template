@@ -1,0 +1,100 @@
+.service-wrapper {
+    background: url(../../assets/images/advantages.jpg) no-repeat center;
+    padding: 200px 0 150px 0;
+    background-size: cover;
+
+    .service-block {
+        text-align: center;
+        margin: 10px 0 30px 0;
+
+        h4 {
+            margin-top: 0.6em;
+            margin-bottom: 0.3em;
+
+            a {
+                font-size: 24px;
+                font-weight: 600;
+                line-height: 1.2;
+                word-break: break-word;
+                color: $gray;
+            }
+        }
+
+        p {
+            color: $mediumGray;
+        }
+
+        .service-icon {
+            display: inline-block;
+            line-height: 1;
+            text-align: center;
+            transition: all 0.2s ease-in-out 0s;
+
+            >i {
+                font-size: 32px;
+                text-align: center;
+                vertical-align: middle;
+                display: inline-block;
+                color: $maroon;
+                border-color: $maroon;
+            }
+        }
+
+        &:hover {
+            .service-icon {
+                -webkit-animation: scaleDisappear 0.3s;
+                animation: scaleDisappear 0.3s;
+            }
+        }
+    }
+
+    .highlight1 {
+        margin-left: 45px;
+
+        .service-block .service-icon * {
+            color: $maroon;
+            border-color: $maroon;
+        }
+    }
+
+    .highlight2 {
+        margin-right: 45px;
+
+        .service-block .service-icon * {
+            color: $maroon;
+            border-color: $maroon;
+        }
+    }
+
+    .highlight3 {
+        .service-block .service-icon * {
+            color: $orange;
+            border-color: $orange;
+        }
+    }
+
+    .highlight4 {
+        .service-block .service-icon * {
+            color: $orange;
+            border-color: $orange;
+        }
+    }
+
+    .highlight5 {
+        margin-left: 45px;
+
+        .service-block .service-icon * {
+            color: $yellow;
+            border-color: $yellow;
+        }
+    }
+
+    .highlight6 {
+        margin-right: 45px;
+
+        .service-block .service-icon * {
+            color: $yellow;
+            border-color: $yellow;
+        }
+    }
+}

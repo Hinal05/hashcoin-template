@@ -1,0 +1,15 @@
+<div class="slider-wrapper container-fluid">
+  {% if title %}
+  <h3>{{ title }}</h3>
+  {% endif %}
+  <div class="lazy slider" id="slider" data-sizes="50vw">
+  {% for row in rows %}
+    {% set row_classes = [
+      "item"
+      ] %}
+    <div{{ row.attributes.addClass(row_classes) }}>
+        {{- row.content -}}
+    </div>
+  {% endfor %}
+  </div>
+</div>

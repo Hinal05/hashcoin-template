@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Profile social icons block.
+ */
+#}
+<!-- Social Icons Template-->
+
+<div class="background">
+    <div class="contacts social">
+        <div class="dark social-block">        
+            {% if facebook_icon %}
+            <a href="{{ facebook_icon }}" class="soc-facebook" title="Facebook"><i class="fa fa-facebook"></i></a>
+            {% endif %}
+            
+            {% if twitter_icon %}
+            <a href="{{ twitter_icon }}" class="soc-twitter" title="Twitter"><i class="fa fa-twitter"></i></a>
+            {% endif %}
+          
+            {% if google_plus_icon %}
+            <a href="{{ google_plus_icon }}" class="soc-google" title="Google"><i class="fa fa-google"></i></a>
+            {% endif %}
+			
+            {% if instragram_icon %}
+            <a href="{{ instragram_icon }}" class="soc-instagram" title="Instagram"><i class="fa fa-instagram"></i></a>
+            {% endif %}
+			
+            {% if telegram_icon %}
+            <a href="{{ telegram_icon }}" class="soc-telegram" title="Telegram"><i class="fa fa-telegram"></i></a>
+            {% endif %}
+
+            {% if linkedin_icon %}
+            <a href="{{ linkedin_icon }}" class="soc-linkedin" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            {% endif %}
+            
+            {% if pinterest_icon %}
+            <a href="{{ pinterest_icon }}" class="soc-pinterest" title="Pinterest"><i class="fa fa-pinterest"></i></a>
+            {% endif %}
+            
+	    {% if youtube_icon %}
+            <a href="{{ youtube_icon }}" class="soc-youtube" title="Youtube"><i class="fa fa-youtube-play"></i></a>
+            {% endif %}
+            
+        </div>
+    </div>
+</div>
+<!-- End Social Icons-->

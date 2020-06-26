@@ -1,0 +1,22 @@
+{#{{ kint(fields.field_image_position.content| render) }}
+{{ kint(fields.field_image_position.content|striptags) }}#}
+<style>
+    .cycle-pager > span.cycle-pager-active{color: {{ fields.field_add_color_code.content|striptags|trim }};}
+</style>
+{% if (fields.field_image_position.content|striptags|trim is not empty) == 'Top' %}
+<div class="blog-screen-item {{ fields.field_image_position.content|striptags|lower|trim }}-position">
+{% endif %}
+    <div class="blog-screen-thumb">
+    {% if (fields.field_blog_image.content is not empty) %}
+        {{ fields.field_blog_image.content }}
+    {% endif %}
+    {% if (fields.field_blog_video.content is not empty) %}
+        {{ fields.field_blog_video.content }}
+    {% endif %}
+    </div>
+    <div class="blog-screen-content">
+        <div class="create-info">{{ fields.created.content }}<span style="color: {{ fields.field_add_color_code.content|striptags|trim }}">{{ fields.view_node.content }}</span></div>
+        <h4>{{ fields.title.content }}</h4>
+        <div class="entry-content">{{ fields.body.content }}</div>
+    </div>
+</div>

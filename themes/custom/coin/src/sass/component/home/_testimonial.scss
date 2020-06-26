@@ -1,0 +1,121 @@
+.testimonial-wrapper {
+    padding: 150px 0;
+
+    .testimonial-item {
+        max-width: 760px;
+        margin: 0 auto;
+        text-align: center;
+
+        .test-avtar {
+            position: relative;
+            display: inline-block;
+
+            >img {
+                display: block;
+                width: auto;
+                margin: 0 auto 35px;
+                border-radius: 50%;
+                max-width: 300px;
+                max-height: 300px;
+            }
+
+            &::after {
+                content: "\f10d";
+                font-family: 'FontAwesome';
+                font-size: 30px;
+                text-align: center;
+                line-height: 80px;
+                font-style: normal;
+                position: absolute;
+                right: 0;
+                bottom: 35px;
+                width: 80px;
+                height: 80px;
+                border-radius: 50%;
+                color: $white;
+                background-color: $yellow;
+            }
+        }
+
+        h2 {
+            a {
+                font-size: 48px;
+                line-height: 0.85;
+                display: block;
+                font-weight: 600;
+                color: $gray;
+
+                span {
+                    color: $maroon;
+                    font-weight: 700;
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.2em;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .hightlight1 {
+        .testimonial-item {
+            .test-avtar::after {
+                background-color: $yellow;
+            }
+
+            h2 a span {
+                color: $maroon;
+            }
+
+            .starrating .starline7-on {
+                background-position: 0 -141px;
+            }
+        }
+    }
+
+    .highlight2 {
+        .testimonial-item {
+            .test-avtar::after {
+                background-color: $orange;
+            }
+
+            h2 a span {
+                color: $orange;
+            }
+
+            .starrating .starline7-on {
+                background-position: 0 -21px;
+            }
+        }
+    }
+
+    .highlight3 {
+        .testimonial-item {
+            .test-avtar::after {
+                background-color: $maroon;
+            }
+
+            h2 a span {
+                color: $yellow;
+            }
+
+            .starrating .starline7-on {
+                background-position: 0 -61px;
+            }
+        }
+    }
+
+    .owl-theme .owl-dots .owl-dot {
+        span {
+            width: 8px;
+            height: 8px;
+            background-color: $gray;
+        }
+
+        &.active span,
+        &:hover span {
+            background-color: $maroon;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+{#{{ kint(_context|keys) }}#}
+{% include directory ~ '/partials/header.html.twig' %}
+<nav class="nav-wrapper" id="myHeader">
+  <div class="container">
+    {{ page.navigation }}
+  </div>
+</nav>
+<main role="main" class="content-wrapper">
+    {{ page.content }}
+</main>
+{% include directory ~ '/partials/footer.html.twig' %}
+<a href="#" class="toTop" style="display: flex;"><i class="fa fa-angle-up"></i></a>

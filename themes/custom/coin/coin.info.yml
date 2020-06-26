@@ -1,0 +1,16 @@
+name: coin
+description: Drupal 8 starter theme
+type: theme
+core: 8.x
+base theme: stable
+
+libraries: 
+    - coin/global-css
+    - coin/global-js
+
+regions:
+    header: 'Header'
+    navigation: 'navigation'
+    content: 'content'
+    footer: 'footer'
+    copyright: 'copyright'

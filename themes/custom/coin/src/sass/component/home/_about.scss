@@ -1,0 +1,40 @@
+.about-wrapper {
+    padding: 150px 0;
+
+    .about-right-content {
+        small {
+            color: $maroon;
+            border-color: $maroon;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.2em;
+        }
+
+        h2 {
+            font-size: 48px;
+            line-height: 0.85;
+            font-weight: 600;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        p {
+            color: $mediumGray;
+            margin-bottom: 15px;
+        }
+
+        .theme-button a {
+            background-color: $maroon;
+            color: $white;
+            min-width: 200px;
+            padding: 15px 40px;
+            letter-spacing: 0.2em;
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.4s linear 0s;
+            border-radius: 30px;
+        }
+    }
+}

@@ -1,0 +1,157 @@
+.blog-wrapper {
+    text-align: center;
+    padding: 150px 0;
+
+    >small {
+        color: $maroon;
+        font-weight: 700;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    >h2 {
+        color: $gray;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 0.85;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    .blog-block {
+        padding-top: 60px;
+        position: relative;
+
+        .owl-theme .owl-nav {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -60px;
+            margin: 0;
+
+            [class*=owl-] {
+                margin: 0;
+                padding: 5px 30px;
+                margin: 0;
+                background-color: transparent;
+                font-weight: 700;
+                color: $mediumGray;
+                line-height: normal;
+            }
+
+            &::before {
+                content: "";
+                width: 2px;
+                height: 11px;
+                position: absolute;
+                background-color: $mediumGray;
+                top: 9px;
+                left: calc(50% - 2px);
+            }
+        }
+
+        .blog-item {
+            border: 1px solid $lightGray2;
+
+            .more-link {
+                >a {
+                    font-size: 0;
+                    background: $maroon;
+                    color: $white;
+                    width: 60px;
+                    height: 60px;
+                    display: flex;
+                    border-radius: 50%;
+                    margin: 0 auto;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    top: -30px;
+
+                    &::after {
+                        content: "\f040";
+                        font-family: FontAwesome;
+                        font-size: 20px;
+                    }
+
+                    &:hover {
+                        background-color: $yellow;
+                    }
+                }
+            }
+
+            .blog-content {
+                padding: 55px 45px;
+                position: relative;
+
+                h3 a {
+                    color: $gray;
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-bottom: 0.8em;
+                    position: relative;
+                }
+
+                p {
+                    -webkit-box-orient: vertical;
+                    display: block;
+                    display: -webkit-box;
+                    font-size: 16px;
+                    height: 90px;
+                    -webkit-line-clamp: 3;
+                    line-height: 30px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+
+            .publish-date {
+                border-top: 1px solid #e5e5e5;
+                padding: 15px;
+                color: $gray;
+                font-weight: 700;
+                font-size: 14px;
+                position: relative;
+
+                .bg-text {
+                    position: absolute;
+                    font-size: 48px;
+                    font-weight: 900;
+                    top: 50%;
+                    left: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    opacity: 0.08;
+                    z-index: 1;
+                }
+            }
+        }
+
+        .hightlight1 .blog-item .more-link a {
+            background: $maroon;
+
+            &:hover {
+                background: $yellow;
+            }
+        }
+
+        .hightlight2 .blog-item .more-link a {
+            background: $orange;
+
+            &:hover {
+                background: $yellow;
+            }
+        }
+
+        .hightlight3 .blog-item .more-link a {
+            background: $yellow;
+
+            &:hover {
+                background: $maroon;
+            }
+        }
+    }
+}

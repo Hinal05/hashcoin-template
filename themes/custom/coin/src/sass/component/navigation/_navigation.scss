@@ -1,0 +1,16 @@
+.nav-wrapper{
+    border-top: 1px solid #e5e5e5;
+
+    .menu{
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+
+        li a {
+            padding: 28px 0;color: $gray;text-transform:uppercase;font-size:14px;font-weight:700;letter-spacing:1px;display:inline-block;margin: 0 30px;
+            
+            &.is-active{color: $maroon;}
+        }
+    }
+}
